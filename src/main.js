@@ -6,11 +6,11 @@ import VeeValidate from "vee-validate";
 
 Vue.config.productionTip = false;
 
-const veeConfig = {
-  events: "change|input"
-};
+// const veeConfig = {
+//   events: "change|input"
+// };
 
-Vue.use(VeeValidate, veeConfig);
+Vue.use(VeeValidate);
 
 /* eslint-disable no-new */
 new Vue({

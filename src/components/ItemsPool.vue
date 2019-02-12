@@ -22,7 +22,7 @@
     <span
       class="error"
       v-if="errors.has(name) && !readOnly"
-      v-text="`${name} field is required`"
+      v-html="`Add at least one item to <b>${name}</b> field`"
     />
     <ul class="itemspool__list">
       <li v-for="(item, i) in itemsList" :key="i">
@@ -113,6 +113,17 @@ export default {
 <style lang="scss">
 .itemspool {
   margin-bottom: 30px;
+  text-align: left;
+
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 18px;
+    font-weight: bold;
+  }
 
   .formitem {
     margin-bottom: 0 !important;
@@ -162,6 +173,7 @@ export default {
     justify-content: flex-start;
     margin-top: 8px;
     padding-left: 0;
+    max-width: 500px;
 
     li {
       display: flex;
